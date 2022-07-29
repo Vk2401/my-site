@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+.btn {
+  margin-top: 25px;
+  background-color: crimson;
+  font-weight: 500;
+  padding: 15px;
+  cursor: pointer;
+  border: 2px solid crimson;
+  border-radius: 30px;
+  max-width: 110px;
+  text-align: center;
+  box-shadow: 4px 4px 5px black;
+}
+.btn:hover {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid crimson;
+}
+.btn a {
+  color: rgb(255, 255, 255);
+}
+.headings-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.headings {
+  top: 40;
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 30px;
+}
+.headings::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: crimson;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+}
+/* nav styling */
+
+.navbar {
+  z-index: 998;
+  position: fixed;
+  background: black;
+  width: 100vw;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: rgba(220, 20, 60, 0.986);
+}
+.navbar.sticky .logo a span {
+  color: rgb(0, 0, 0);
+}
+.max-width {
+  padding: 0 60px;
+  max-width: 1300px;
+  margin: auto;
+}
+.navbar .menu li a {
+  color: rgb(255, 255, 255);
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+.navbar.sticky .menu li a:hover {
+  color: black;
+}
+.navbar .logo a {
+  color: white;
+  font-size: 34px;
+  font-weight: 600;
+}
+.navbar .logo a span {
+  color: crimson;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  font-weight: 500;
+  margin-left: 25px;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu li a:hover {
+  color: crimson;
+}
+
+.arrow {
+  height: 4vh;
+  display: none;
+  width: 30px;
+  transform: translateY(50);
+  cursor: pointer;
+}
+.line1,
+.line2,
+.line3 {
+  height: 3px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* home section stylin */
+
+.home {
+  display: flex;
+  background: url(img/vk.jpg) no-repeat left;
+  height: 100vh;
+  color: white;
+  min-height: 500px;
+
+  background-size: cover;
+
+  align-items: center;
+  justify-content: center;
+}
+.home .homeContent .txt1 {
+  font-size: 27px;
+}
+.home .homeContent .txt2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .homeContent .txt3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .homeContent .txt3 span {
+  color: crimson;
+  font-weight: 500;
+}
+
+.active {
+  width: 100%;
+  right: 0;
+  transition: all 0.3s ease;
+}
+.toggle1 {
+  transition: transform 0.6s;
+  transform: rotate(45deg) translate(9px, 7px);
+}
+.toggle2 {
+  display: none;
+}
+.toggle3 {
+  transition: transform 0.6s;
+  transform: rotate(-45deg);
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+/* about section */
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.acontent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.a-left {
+  text-align: center;
+  padding: 20px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.a-right {
+  display: block;
+  padding: 50px;
+  width: 400px;
+}
+/* skills section*/
+.skillHD {
+  color: white;
+}
+.skills {
+  background-color: #000;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+.skill-content {
+  margin-top: 20px;
+  height: 70vh;
+  width: 70vw;
+
+  padding: 20px auto;
+}
+.skillitems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-direction: column;
+}
+.progressin {
+  background-color: crimson;
+  position: absolute;
+  height: 3px;
+}
+.progress {
+  height: 3px;
+  width: 100%;
+  background-color: aliceblue;
+  position: relative;
+}
+
+.pgrs1 ::after {
+  content: "80%";
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  color: white;
+  right: 0;
+}
+.pgrs2 ::after {
+  content: "80%";
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  color: white;
+  right: 0;
+}
+.pgrs3 ::after {
+  content: "75%";
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  color: white;
+  right: 0;
+}
+.pgrs4 ::after {
+  content: "48%";
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  color: white;
+  right: 0;
+}
+.pgrs5 ::after {
+  content: "40%";
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  color: white;
+  right: 0;
+}
+/* //contact section  */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  background-image: linear-gradient(to right, rgb(40, 40, 43), rgb(0, 0, 0));
+  padding: 30px;
+}
+.f-items {
+  padding: 40px;
+  background: rgba(245, 245, 245, 0.055);
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  position: relative;
+}
+.form-container {
+  margin-top: 100px;
+}
+
+input,
+textarea {
+  width: 300px;
+  background: transparent;
+  border: none;
+  padding: 20px;
+  color: white;
+  border-radius: 30px;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  box-shadow: 2px 4px 8px black;
+  outline: none;
+  border: none;
+}
+
+/* media */
+@media (max-width: 1300) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1100) {
+  .about .aboutContent .left img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .home.homeContent a {
+    font-size: 20px;
+    padding: 9px 25px;
+  }
+  .arrow {
+    display: block;
+    z-index: 999;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    right: -150px;
+    top: 0;
+    background: black;
+    padding-top: 80px;
+    transition: all 0.4s ease;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .navbar.sticky .menu li a:hover {
+    color: rgb(197, 26, 26);
+  }
+  .home .homeContent .txt2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+  .home .homeContent .txt3 {
+    font-size: 25px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .homeContent .txt2 {
+    font-size: 40px;
+  }
+  .home .homeContent .txt3 {
+    font-size: 15px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}
+/* die css */
+.gspace{
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  
+}
+.dief{
+  color: white;
+  height: 100px;
+  width: 100px;
+  border: 1px solid white;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  border-radius: 20%;
+  font-size: 300%;
+}
+.f5{
+  transform: rotateX(90deg);
+  background-color: #000;
+  transform-origin: top;
+}
+.f2{
+  transform: rotateX(-90deg);
+  background-color: #000;
+  transform-origin: bottom;
+}
+.f3{
+  transform: rotateY(90deg);
+  background-color: #000;
+  transform-origin: right;
+}
+.f4{
+  transform: rotateY(-90deg) ;
+  background-color: #000;
+  transform-origin:left;
+}
+.f1{
+  transform-origin:top ;
+  background-color: #000;
+ transform: translateZ(100px);
+}
+.f6{
+  transform-origin:bottom;
+  background-color: #000;
+}
+.cube{
+  box-shadow: 2px 4px 8px black;
+  transform-style: preserve-3d;
+  animation: rotate 1s linear;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg) rotateY(0deg);
+  }
+  100%{
+    transform: rotate(360deg)rotateY(360deg);
+  }
+}
+.blocks{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: rgb(255, 255, 255);
+}
